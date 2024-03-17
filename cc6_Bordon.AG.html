@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 6
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> Quadratic Formula </h1>
+
+        <button onclick="quadratic()">Find the root</button>
+
+        <h4 id="result"></h4>
+
+        <script>
+            function quadratic() {
+               var a = prompt("Please enter value for a");
+			   var b = prompt("Please enter value for b");
+			   var c = prompt("Please enter value for c");
+			   
+			   var df = ((b * b) - 4*a*c);
+			   var srdf = Math.sqrt(df);
+			   
+			   var nnx1 = (-b + srdf) / (2*a);
+			   var nx1 = nnx1.toFixed(2);				
+			   var nnx2 = (-b - srdf) / (2*a);
+			   var nx2 = nnx2.toFixed(2);
+			   			   
+			  if (df === 0) {
+					document.getElementById("result").innerHTML = "The value for x1 and x2 are equal: x1 = " + nx1 + " is the same as x2 = " + nx2;
+			  } else if (df > 0) {
+					document.getElementById("result").innerHTML = "The value for x1 = " + nx1 + " and the value for x2 = " + nx2;
+			  } else {
+					document.getElementById("result").innerHTML = "The value for x1 and x2 are imaginary.";
+			  }			   
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 3
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+
+            div {
+                background-color: white;
+                width: 300px;
+                height: 30px;
+                text-align: center;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            th, td {
+                border: 1px solid black;
+                padding: 10px;
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Name List </h1>
+
+       <table id="table"> 
+        <tr>
+            <th id="firstId"> First Name</th>
+            <th id="middleId"> Middle Name</th>
+            <th id="lastId"> Last Name</th>
+        </tr>
+       </table>
+       <button onclick="addName()">Add Name</button>
+        <script>
+            function addName(){
+				var fullName = prompt("Please enter your full name seperated by a comma like so: first name, middle name, last name")
+				var fullNameTrim = fullName.trim();
+				
+				const name = fullNameTrim.split(",");
+				let firstName = name[0];
+				let middleName = name[1];
+				let lastName = name[2];
+				
+				document.getElementById("firstId").innerHTML = firstName;
+				document.getElementById("middleId").innerHTML = middleName; 
+				document.getElementById("lastId").innerHTML = lastName; 	
+            }
+        </script>
+    </body>
+</html>

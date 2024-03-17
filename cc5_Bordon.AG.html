@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 5
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> Modified FLAMES </h1>
+
+        <button onclick="flames()">Match Names</button>
+        <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
+        <h3 id="result"></h3>
+
+
+        <script>
+            function flames(){
+				var n1 = prompt("Please enter first name");
+				var n2 = prompt("Please enter second name");
+				document.getElementById("name").innerHTML = n1 + " & " + n2;
+				
+				var name1 = n1.trim();
+				var name2 = n2.trim();
+				var firstName = name1.length;
+				var secondName = name2.length;
+				
+				var sum = firstName + secondName;
+				var f = "Friends";
+				var l = "Lovers";
+				var a = "Acquaintances";
+				var m = "Marriage";
+				var e = "Enemies";
+				var s = "Sweethearts";
+				
+				if (sum%6 === 1) {
+					document.getElementById("result").innerHTML = f;
+				} else if (sum%6 === 2) {
+					document.getElementById("result").innerHTML = l;
+				} else if (sum%6 === 3) {
+					document.getElementById("result").innerHTML = a;
+				} else if (sum%6 === 4) {
+					document.getElementById("result").innerHTML = m;
+				} else if (sum%6 === 5) {
+					document.getElementById("result").innerHTML = e;
+				} else {
+					document.getElementById("result").innerHTML = s;
+				}
+					
+				}
+        </script>
+    </body>
+</html>
